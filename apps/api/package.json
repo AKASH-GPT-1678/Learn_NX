@@ -1,5 +1,5 @@
 {
-  "name": "@org/backend",
+  "name": "@org/api",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -11,8 +11,8 @@
         "cache": true,
         "executor": "@nx/js:prune-lockfile",
         "outputs": [
-          "{workspaceRoot}/apps/backend/dist/package.json",
-          "{workspaceRoot}/apps/backend/dist/package-lock.json"
+          "{workspaceRoot}/apps/api/dist/package.json",
+          "{workspaceRoot}/apps/api/dist/package-lock.json"
         ],
         "options": {
           "buildTarget": "build"
@@ -24,7 +24,7 @@
         ],
         "cache": true,
         "outputs": [
-          "{workspaceRoot}/apps/backend/dist/workspace_modules"
+          "{workspaceRoot}/apps/api/dist/workspace_modules"
         ],
         "executor": "@nx/js:copy-workspace-modules",
         "options": {
@@ -46,15 +46,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@org/backend:build",
+          "buildTarget": "@org/api:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@org/backend:build:development"
+            "buildTarget": "@org/api:build:development"
           },
           "production": {
-            "buildTarget": "@org/backend:build:production"
+            "buildTarget": "@org/api:build:production"
           }
         }
       }
